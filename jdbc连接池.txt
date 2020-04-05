@@ -1,0 +1,18 @@
+ <!--配置druid连接池-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/ssm?serverTimezone=GMT%2B8"/>
+        <property name="user" value="root"/>
+        <property name="password" value="1234"/>
+    </bean>
+
+mysql8.0以上所需驱动及其配置
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.11</version>
+</dependency>
+jdbc.driver=com.mysql.cj.jdbc.Driver
+jdbc.url=jdbc:mysql://xxx.xx.xx.xxx:3306/db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+jdbc.username=root
+jdbc.password=admin
